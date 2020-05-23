@@ -5,7 +5,6 @@
 }
 
 #header {
-    height: 100vh;
     background-image: url('images/background.png');
     background-position: center;
     background-size: cover;
@@ -381,7 +380,7 @@ hr {
         width: 70px;
     }
     .header-text {
-        margin-top: 100px;
+        margin-top: 70px;
     }
     h1 {
         font-size: 25px;
@@ -432,5 +431,18 @@ hr {
     .link-title {
         flex-basis: 50%;
         margin-bottom: 30px;
+    }
+    #features {
+        padding-top: 50px;
+        padding-bottom: 20px;
+    }
+    #offer {
+        margin-bottom: 40px;
+    }
+    .feature-btn {
+        margin: 40px auto 0;
+        display: flex;
+        align-items: flex-end;
+        justify-content: center;
     }
 }
