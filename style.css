@@ -415,9 +415,8 @@ hr {
     .course-left-col {
         flex-basis: 100%;
     }
-    .course-right-col {
-        flex-basis: 100%;
-        margin-top: 50px;
+    .course-right-col img {
+        display: none;
     }
     .contact-left-col,
     .contact-right-col {
