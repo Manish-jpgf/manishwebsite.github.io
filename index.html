@@ -2,24 +2,21 @@
 <html>
 
 <head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
     <title>Page Title</title>
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
-
-    <!-- jQuery library -->
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' media='screen' href='style_business_idea.css'>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-
-    <!-- Latest compiled JavaScript -->
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
-    <link rel='stylesheet' type='text/css' media='screen' href='style.css'>
 </head>
 
 <body>
-
     <section id="header">
         <div class="container">
             <img src="images/logo.png" class="logo">
         </div>
     </section>
+
     <nav id="sideNav">
         <ul>
             <li><a href="index.php">Home</a></li>
@@ -30,17 +27,20 @@
     </nav>
     <img src="images/menu.png" id="menuBtn">
 
-    <div class="container">
-        <h1 class="text-center"><b>The Business Idea Generator</b></h1>
-        <h1 class="text-center">(Generate tons of business ideas quickly)</h1><br>
-        <p class="text-center">Click “Generate” to get ideas:</p><br>
-        <div class="text-center idea-bg"><br>
-            <button class="btn btn-light .btn-lg" id="displayidea"><b><h3>Generate Your Million Dollar Idea</h3><b></button><br><br>
-            <div id="response"></div><br>
+    
+ <div class="container"><br><br>
+        <h1 style="color: red" class="text-center"><b>The Business Idea Generator</b></h1><br>
+        <h1 style="color: green" class="text-center">(Generate tons of business ideas quickly)</h1><br>
+        <p  style="color: orange" class="text-center">Click “Generate” to get ideas:</p><br>
+        <div class="text-center">
+         <button class="common-btn" id="displayidea"><b>Generate Your Million Dollar Idea<b></button><br><br>
+         </div>
+            <div id="response" class="text-center" style="background-color: #f67c92"></div><br>
         </div>
     </div>
-
-    <!--footer-->
+ 
+    
+       <!--footer-->
 
     <section id="footer">
         <div class="container footer-row">
@@ -84,20 +84,15 @@
         </div>
     </section>
 
-    <script type="text/javascript">
-        $(document).ready(function() {
-            $('#displayidea').click(function() {
-                $.ajax({
-                    url: 'display_idea.php',
-                    type: 'post',
-                    success: function(responsedata) {
-                        $('#response').html(responsedata)
-                    }
-                });
-            });
-        });
+    <!--social icon-->
 
-
+    <div class="social-icons">
+        <img src="images/facebook.png" alt="">
+        <img src="images/twitter.png" alt="">
+        <img src="images/instagram.png" alt="">
+        <img src="images/linkedin.png" alt="">
+    </div>
+    <script>
         var menuBtn = document.getElementById('menuBtn')
         var sideNav = document.getElementById('sideNav')
 
@@ -109,8 +104,28 @@
                 sideNav.style.right = '-250px'
             }
         }
+
+        $(document).ready(function(){
+            $('#displayidea').click(function(){
+            $.ajax({
+                url: 'display_idea.php',
+                type: 'post',
+                success : function(responsedata){
+                    $('#response').html(responsedata)
+                }
+            });
+        });
+        });
+    
+
     </script>
 
 </body>
 
 </html>
+
+    <script type="text/javascript">
+
+       
+    </script> 
+
